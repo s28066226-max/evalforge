@@ -1,0 +1,4 @@
+# Never upload local secrets or the local results database; deployments serve data/published.json.
+.env*
+!.env.example
+data/*.db*

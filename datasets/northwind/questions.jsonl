@@ -1,0 +1,24 @@
+{"id":"q01","question":"How much does the Team plan cost?","reference":"$29 per user per month.","sources":["pricing"]}
+{"id":"q02","question":"What discount do annual plans get?","reference":"20% compared with monthly billing.","sources":["pricing"]}
+{"id":"q03","question":"Do I need a credit card to start a free trial, and how long is it?","reference":"No credit card is required; the trial is 14 days of the Team plan.","sources":["pricing"]}
+{"id":"q04","question":"What happens to my workspace when the free trial ends?","reference":"It is downgraded to read-only mode until a plan is selected.","sources":["pricing"]}
+{"id":"q05","question":"Can I pay with PayPal?","reference":"No. Northwind accepts Visa, Mastercard and American Express; Enterprise can also pay by bank transfer.","sources":["pricing"]}
+{"id":"q06","question":"If I remove seats, when does it take effect?","reference":"At the next renewal date, not immediately.","sources":["pricing"]}
+{"id":"q07","question":"Can an admin cancel the workspace subscription?","reference":"No, only workspace owners can cancel.","sources":["refunds"]}
+{"id":"q08","question":"How long is data kept after I cancel?","reference":"30 days, during which the owner can reactivate; after that it is permanently deleted.","sources":["refunds"]}
+{"id":"q09","question":"Can I get a refund on an annual plan?","reference":"Yes, prorated, if cancelled within the first 60 days of the term; not after.","sources":["refunds"]}
+{"id":"q10","question":"How long do refunds take to process?","reference":"Within 10 business days, returned to the original payment method.","sources":["refunds"]}
+{"id":"q11","question":"Why might my downgrade from Team to Starter be blocked?","reference":"If the workspace uses more than 50 GB of storage.","sources":["refunds"]}
+{"id":"q12","question":"What uptime does the Enterprise plan guarantee?","reference":"99.99% monthly uptime.","sources":["sla"]}
+{"id":"q13","question":"What service credit do I get if uptime drops below 99.0%?","reference":"A 25% credit on that month's fee.","sources":["sla"]}
+{"id":"q14","question":"Can service credits be paid out as cash?","reference":"No, they are applied to future invoices only.","sources":["sla"]}
+{"id":"q15","question":"When does scheduled maintenance normally happen?","reference":"Sundays between 02:00 and 04:00 UTC, announced at least 72 hours in advance.","sources":["sla"]}
+{"id":"q16","question":"Is Northwind HIPAA compliant?","reference":"No, it is not HIPAA compliant and must not store protected health information.","sources":["security"]}
+{"id":"q17","question":"Can I move my workspace to a different region later?","reference":"No, the region cannot be changed after creation.","sources":["security"]}
+{"id":"q18","question":"Which plans include SCIM provisioning?","reference":"Enterprise only.","sources":["security"]}
+{"id":"q19","question":"How often are backups taken and how long are they kept?","reference":"Every 6 hours, retained for 35 days.","sources":["security"]}
+{"id":"q20","question":"What is the API rate limit on the Team plan?","reference":"1,000 requests per minute per token.","sources":["api"]}
+{"id":"q21","question":"Does Northwind offer a mobile app for iPad?","unanswerable":true}
+{"id":"q22","question":"Who is the CEO of Northwind Cloud?","unanswerable":true}
+{"id":"q23","question":"What is the phone number for the Northwind sales team?","unanswerable":true}
+{"id":"q24","question":"Which programming languages have official Northwind SDKs?","unanswerable":true}

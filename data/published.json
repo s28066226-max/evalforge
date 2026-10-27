@@ -1,0 +1,3800 @@
+{
+ "version": 1,
+ "exportedAt": "2026-10-27T05:29:12.987Z",
+ "runs": [
+  {
+   "run": {
+    "id": "run_202610270526_f316",
+    "createdAt": "2026-10-27T05:26:05.483Z",
+    "status": "done",
+    "config": {
+     "dataset": "northwind",
+     "models": [
+      "groq:openai/gpt-oss-20b",
+      "groq:qwen/qwen3.8-27b"
+     ],
+     "baseline": "groq:openai/gpt-oss-20b",
+     "judgeModel": "groq:openai/gpt-oss-120b",
+     "topK": 4,
+     "effort": "medium",
+     "provider": "live"
+    },
+    "questionCount": 24,
+    "error": null,
+    "questions": [
+     {
+      "id": "q01",
+      "question": "How much does the Team plan cost?",
+      "reference": "$29 per user per month.",
+      "sources": [
+       "pricing"
+      ]
+     },
+     {
+      "id": "q02",
+      "question": "What discount do annual plans get?",
+      "reference": "20% compared with monthly billing.",
+      "sources": [
+       "pricing"
+      ]
+     },
+     {
+      "id": "q03",
+      "question": "Do I need a credit card to start a free trial, and how long is it?",
+      "reference": "No credit card is required; the trial is 14 days of the Team plan.",
+      "sources": [
+       "pricing"
+      ]
+     },
+     {
+      "id": "q04",
+      "question": "What happens to my workspace when the free trial ends?",
+      "reference": "It is downgraded to read-only mode until a plan is selected.",
+      "sources": [
+       "pricing"
+      ]
+     },
+     {
+      "id": "q05",
+      "question": "Can I pay with PayPal?",
+      "reference": "No. Northwind accepts Visa, Mastercard and American Express; Enterprise can also pay by bank transfer.",
+      "sources": [
+       "pricing"
+      ]
+     },
+     {
+      "id": "q06",
+      "question": "If I remove seats, when does it take effect?",
+      "reference": "At the next renewal date, not immediately.",
+      "sources": [
+       "pricing"
+      ]
+     },
+     {
+      "id": "q07",
+      "question": "Can an admin cancel the workspace subscription?",
+      "reference": "No, only workspace owners can cancel.",
+      "sources": [
+       "refunds"
+      ]
+     },
+     {
+      "id": "q08",
+      "question": "How long is data kept after I cancel?",
+      "reference": "30 days, during which the owner can reactivate; after that it is permanently deleted.",
+      "sources": [
+       "refunds"
+      ]
+     },
+     {
+      "id": "q09",
+      "question": "Can I get a refund on an annual plan?",
+      "reference": "Yes, prorated, if cancelled within the first 60 days of the term; not after.",
+      "sources": [
+       "refunds"
+      ]
+     },
+     {
+      "id": "q10",
+      "question": "How long do refunds take to process?",
+      "reference": "Within 10 business days, returned to the original payment method.",
+      "sources": [
+       "refunds"
+      ]
+     },
+     {
+      "id": "q11",
+      "question": "Why might my downgrade from Team to Starter be blocked?",
+      "reference": "If the workspace uses more than 50 GB of storage.",
+      "sources": [
+       "refunds"
+      ]
+     },
+     {
+      "id": "q12",
+      "question": "What uptime does the Enterprise plan guarantee?",
+      "reference": "99.99% monthly uptime.",
+      "sources": [
+       "sla"
+      ]
+     },
+     {
+      "id": "q13",
+      "question": "What service credit do I get if uptime drops below 99.0%?",
+      "reference": "A 25% credit on that month's fee.",
+      "sources": [
+       "sla"
+      ]
+     },
+     {
+      "id": "q14",
+      "question": "Can service credits be paid out as cash?",
+      "reference": "No, they are applied to future invoices only.",
+      "sources": [
+       "sla"
+      ]
+     },
+     {
+      "id": "q15",
+      "question": "When does scheduled maintenance normally happen?",
+      "reference": "Sundays between 02:00 and 04:00 UTC, announced at least 72 hours in advance.",
+      "sources": [
+       "sla"
+      ]
+     },
+     {
+      "id": "q16",
+      "question": "Is Northwind HIPAA compliant?",
+      "reference": "No, it is not HIPAA compliant and must not store protected health information.",
+      "sources": [
+       "security"
+      ]
+     },
+     {
+      "id": "q17",
+      "question": "Can I move my workspace to a different region later?",
+      "reference": "No, the region cannot be changed after creation.",
+      "sources": [
+       "security"
+      ]
+     },
+     {
+      "id": "q18",
+      "question": "Which plans include SCIM provisioning?",
+      "reference": "Enterprise only.",
+      "sources": [
+       "security"
+      ]
+     },
+     {
+      "id": "q19",
+      "question": "How often are backups taken and how long are they kept?",
+      "reference": "Every 6 hours, retained for 35 days.",
+      "sources": [
+       "security"
+      ]
+     },
+     {
+      "id": "q20",
+      "question": "What is the API rate limit on the Team plan?",
+      "reference": "1,000 requests per minute per token.",
+      "sources": [
+       "api"
+      ]
+     },
+     {
+      "id": "q21",
+      "question": "Does Northwind offer a mobile app for iPad?",
+      "unanswerable": true
+     },
+     {
+      "id": "q22",
+      "question": "Who is the CEO of Northwind Cloud?",
+      "unanswerable": true
+     },
+     {
+      "id": "q23",
+      "question": "What is the phone number for the Northwind sales team?",
+      "unanswerable": true
+     },
+     {
+      "id": "q24",
+      "question": "Which programming languages have official Northwind SDKs?",
+      "unanswerable": true
+     }
+    ]
+   },
+   "results": [
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q01",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "The Team plan costs $29 per user per month. [pricing#0]",
+     "refused": false,
+     "inputTokens": 490,
+     "outputTokens": 72,
+     "latencyMs": 544.0488330000001,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The Team plan costs $29 per user per month.",
+       "supported": true
+      }
+     ],
+     "rationale": "The claim is directly supported by pricing#0, matches the reference answer, and directly answers the question."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q01",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "The Team plan costs $29 per user per month and includes 1 TB of storage per workspace [pricing#0].",
+     "refused": false,
+     "inputTokens": 466,
+     "outputTokens": 71,
+     "latencyMs": 247.06141700000012,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The Team plan costs $29 per user per month",
+       "supported": true
+      },
+      {
+       "claim": "The Team plan includes 1 TB of storage per workspace",
+       "supported": true
+      }
+     ],
+     "rationale": "Both factual statements are directly supported by pricing#0, the answer addresses the question directly, and the cost matches the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q02",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Annual plans receive a 20% discount compared with monthly billing. [pricing#1]",
+     "refused": false,
+     "inputTokens": 507,
+     "outputTokens": 81,
+     "latencyMs": 487.5469159999998,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Annual plans receive a 20% discount compared with monthly billing.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the discount and cites the pricing document, which explicitly mentions the 20% discount. It fully addresses the question and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q02",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Annual plans receive a 20% discount compared with monthly billing [pricing#1].",
+     "refused": false,
+     "inputTokens": 491,
+     "outputTokens": 58,
+     "latencyMs": 215.17824999999993,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Annual plans receive a 20% discount compared with monthly billing.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the discount amount, which is explicitly given in the pricing document, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q03",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No – a credit card is not required to begin a free trial. The trial lasts 14 days. [pricing#2]",
+     "refused": false,
+     "inputTokens": 371,
+     "outputTokens": 122,
+     "latencyMs": 244.11404099999982,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "A credit card is not required to begin a free trial.",
+       "supported": true
+      },
+      {
+       "claim": "The trial lasts 14 days.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements are directly supported by the pricing document and exactly match the reference answer, fully addressing the question."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q03",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No, a credit card is not required to start a free trial. The free trial lasts 14 days and is for the Team plan [pricing#2].",
+     "refused": false,
+     "inputTokens": 335,
+     "outputTokens": 112,
+     "latencyMs": 318.72891699999946,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "No, a credit card is not required to start a free trial.",
+       "supported": true
+      },
+      {
+       "claim": "The free trial lasts 14 days and is for the Team plan.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements are directly supported by the pricing document, and they exactly match the reference answer, fully addressing the question."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q04",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "When the 14‑day free trial ends, the workspace is automatically downgraded to read‑only mode until a paid plan is selected. [pricing#2]",
+     "refused": false,
+     "inputTokens": 524,
+     "outputTokens": 139,
+     "latencyMs": 549.7712499999998,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "When the 14‑day free trial ends, the workspace is automatically downgraded to read‑only mode until a paid plan is selected.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly addresses the question and restates the fact from pricing#2 that the workspace becomes read‑only after the trial, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q04",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "When your 14-day free trial of the Team plan ends, your workspace is downgraded to read-only mode until you select a paid plan [pricing#2].",
+     "refused": false,
+     "inputTokens": 502,
+     "outputTokens": 94,
+     "latencyMs": 427.32666699999936,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "When the 14-day free trial of the Team plan ends, the workspace is downgraded to read-only mode until a paid plan is selected.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer contains a single factual claim that matches the statement in document pricing#2, so it is fully supported. It directly addresses the question and aligns exactly with the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q05",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No, PayPal is not accepted for payments. [pricing#1]",
+     "refused": false,
+     "inputTokens": 271,
+     "outputTokens": 68,
+     "latencyMs": 504.2615000000005,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "PayPal is not accepted for payments.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer correctly states that PayPal is not accepted, which is directly supported by the document and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q05",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No, PayPal is not accepted. Northwind accepts Visa, Mastercard, and American Express, and enterprise customers may also pay by bank transfer with net-30 terms [pricing#1].",
+     "refused": false,
+     "inputTokens": 225,
+     "outputTokens": 76,
+     "latencyMs": 239.54433299999982,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "PayPal is not accepted.",
+       "supported": true
+      },
+      {
+       "claim": "Northwind accepts Visa, Mastercard, and American Express.",
+       "supported": true
+      },
+      {
+       "claim": "Enterprise customers may also pay by bank transfer with net-30 terms.",
+       "supported": true
+      }
+     ],
+     "rationale": "All three factual statements are explicitly present in the provided document, directly answering the PayPal question and matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q06",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Removing seats takes effect at the next renewal date, not immediately. [pricing#3]",
+     "refused": false,
+     "inputTokens": 385,
+     "outputTokens": 75,
+     "latencyMs": 346.1799169999995,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Removing seats takes effect at the next renewal date, not immediately.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer restates exactly the policy from pricing#3, matching the reference answer, so it is fully relevant, correct, and the claim is supported by the document."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q06",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Removing seats takes effect at the next renewal date, not immediately. [pricing#3]",
+     "refused": false,
+     "inputTokens": 351,
+     "outputTokens": 67,
+     "latencyMs": 226.36354200000278,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Removing seats takes effect at the next renewal date, not immediately.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer restates the exact statement from pricing#3, directly answering the question. The claim is supported by the document, fully relevant, and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q07",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No—only the workspace owner has the permission to cancel the subscription; admins cannot cancel it. [refunds#0]",
+     "refused": false,
+     "inputTokens": 448,
+     "outputTokens": 84,
+     "latencyMs": 537.3808329999993,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Only the workspace owner has the permission to cancel the subscription; admins cannot cancel it.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly addresses the question and correctly states that only owners can cancel, which matches both the provided document and the reference answer. The claim is explicitly supported by refunds#0."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q07",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No, an admin cannot cancel the workspace subscription. Only workspace owners have the ability to cancel; admins do not have this permission. [refunds#0]",
+     "refused": false,
+     "inputTokens": 417,
+     "outputTokens": 79,
+     "latencyMs": 252.67808400000285,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "An admin cannot cancel the workspace subscription.",
+       "supported": true
+      },
+      {
+       "claim": "Only workspace owners have the ability to cancel; admins do not have this permission.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements are directly supported by the Refund and Cancellation Policy document, which states that only workspace owners can cancel and admins cannot. The answer directly addresses the question and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q08",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "After cancellation, data is retained for 30 days, after which all workspace data is permanently deleted. [refunds#0]",
+     "refused": false,
+     "inputTokens": 487,
+     "outputTokens": 93,
+     "latencyMs": 636.8998329999995,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "After cancellation, data is retained for 30 days, after which all workspace data is permanently deleted.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer repeats the exact information from the Refund and Cancellation Policy document, directly answering the question and matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q08",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "After cancellation, your workspace data is retained for 30 days, during which the owner can reactivate the workspace with all content intact. After that 30-day period, all data is permanently deleted. [refunds#0]",
+     "refused": false,
+     "inputTokens": 461,
+     "outputTokens": 114,
+     "latencyMs": 318.552166999998,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "After cancellation, workspace data is retained for 30 days.",
+       "supported": true
+      },
+      {
+       "claim": "During that period, the owner can reactivate the workspace with all content intact.",
+       "supported": true
+      },
+      {
+       "claim": "After that 30-day period, all data is permanently deleted.",
+       "supported": true
+      }
+     ],
+     "rationale": "All three factual statements are directly supported by the Refund and Cancellation Policy document and match the reference answer, making the response fully correct and on point."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q09",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Yes—annual plans are refundable on a prorated basis if you cancel within the first 60 days of the term. After 60 days, the plan is non‑refundable. Refunds are processed within 10 business days and returned to the original payment method. [refunds#1]",
+     "refused": false,
+     "inputTokens": 510,
+     "outputTokens": 132,
+     "latencyMs": 603.913792000003,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Annual plans are refundable on a prorated basis if you cancel within the first 60 days of the term.",
+       "supported": true
+      },
+      {
+       "claim": "After 60 days, the plan is non‑refundable.",
+       "supported": true
+      },
+      {
+       "claim": "Refunds are processed within 10 business days and returned to the original payment method.",
+       "supported": true
+      }
+     ],
+     "rationale": "All three factual statements are directly stated in the Refund and Cancellation Policy document, fully answering the question and matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q09",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Yes, but only conditionally. Annual plans can be refunded on a prorated basis if you cancel within the first 60 days of the term. After 60 days, annual plans are not refundable [refunds#1]. Refund requests are processed within 10 business days and returned to the original payment method [refunds#1].",
+     "refused": false,
+     "inputTokens": 494,
+     "outputTokens": 150,
+     "latencyMs": 390.330667000002,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Annual plans can be refunded on a prorated basis if you cancel within the first 60 days of the term.",
+       "supported": true
+      },
+      {
+       "claim": "After 60 days, annual plans are not refundable.",
+       "supported": true
+      },
+      {
+       "claim": "Refund requests are processed within 10 business days and returned to the original payment method.",
+       "supported": true
+      }
+     ],
+     "rationale": "All three factual statements are directly supported by the Refund and Cancellation Policy document, and the answer fully addresses the question matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q10",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Refund requests are processed within 10 business days and are returned to the original payment method. [refunds#1]",
+     "refused": false,
+     "inputTokens": 381,
+     "outputTokens": 121,
+     "latencyMs": 556.5397920000032,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Refund requests are processed within 10 business days and are returned to the original payment method.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer repeats the exact information from refunds#1, which directly states the processing time and method, fully addressing the question and matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q10",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Refund requests are processed within **10 business days** and are returned to the original payment method [refunds#1].",
+     "refused": false,
+     "inputTokens": 352,
+     "outputTokens": 84,
+     "latencyMs": 269.30854100000215,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Refund requests are processed within 10 business days and are returned to the original payment method.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the processing time and method, which matches the reference answer and is explicitly confirmed by document refunds#1."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q11",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Because your workspace is using more than 50 GB of storage, the downgrade will be blocked until the usage falls below the Starter plan’s limit【refunds#2】.",
+     "refused": false,
+     "inputTokens": 450,
+     "outputTokens": 138,
+     "latencyMs": 544.9977079999953,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "If the workspace uses more than 50 GB of storage, the downgrade from Team to Starter will be blocked until usage falls below the Starter limit.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer contains a single factual claim that exactly matches the policy described in refunds#2, so it is fully supported. It directly addresses the question, matching the reference answer, thus scoring maximum on relevance and correctness."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q11",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "A downgrade from Team to Starter will be blocked if your workspace uses more than 50 GB of storage. You must reduce usage below the Starter limit (50 GB) before the downgrade can proceed [refunds#2][pricing#0].",
+     "refused": false,
+     "inputTokens": 427,
+     "outputTokens": 146,
+     "latencyMs": 384.3729579999999,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "A downgrade from Team to Starter will be blocked if your workspace uses more than 50 GB of storage.",
+       "supported": true
+      },
+      {
+       "claim": "You must reduce usage below the Starter limit (50 GB) before the downgrade can proceed.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements are directly supported by the Refund and Cancellation Policy document, which says the downgrade is blocked until usage is reduced below the Starter limit. The answer directly addresses the question and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q12",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "The Enterprise plan guarantees 99.99% monthly uptime. [sla#0]",
+     "refused": false,
+     "inputTokens": 499,
+     "outputTokens": 59,
+     "latencyMs": 495.4983330000032,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The Enterprise plan guarantees 99.99% monthly uptime.",
+       "supported": true
+      }
+     ],
+     "rationale": "The claim directly matches the SLA document stating 99.99% monthly uptime for Enterprise plans and aligns with the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q12",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "The Enterprise plan has a 99.99% monthly uptime commitment [sla#0].",
+     "refused": false,
+     "inputTokens": 479,
+     "outputTokens": 86,
+     "latencyMs": 365.8519589999996,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The Enterprise plan has a 99.99% monthly uptime commitment",
+       "supported": true
+      }
+     ],
+     "rationale": "The claim is directly stated in document sla#0 and exactly matches the reference answer, fully addressing the question."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q13",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "The service credit is 25% of the monthly fee【sla#1】.",
+     "refused": false,
+     "inputTokens": 502,
+     "outputTokens": 103,
+     "latencyMs": 390.24991600000067,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The service credit is 25% of the monthly fee.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the credit amount, which matches the reference answer and is explicitly supported by SLA document #1, which says uptime below 99.0% earns a 25% credit."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q13",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "If monthly uptime falls below 99.0%, you earn a 25% service credit on that month's fee. The credit is applied to future invoices (not cash) and must be requested within 30 days of the end of the affected month by contacting support [sla#1].",
+     "refused": false,
+     "inputTokens": 483,
+     "outputTokens": 110,
+     "latencyMs": 501.6936249999999,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "If monthly uptime falls below 99.0%, you earn a 25% service credit on that month's fee.",
+       "supported": true
+      },
+      {
+       "claim": "The credit is applied to future invoices and cannot be exchanged for cash.",
+       "supported": true
+      },
+      {
+       "claim": "Credits must be requested within 30 days of the end of the affected month by contacting support.",
+       "supported": true
+      }
+     ],
+     "rationale": "All three factual statements are directly stated in document sla#1, and the answer correctly provides the 25% credit, matching the reference answer. The response is fully on-topic."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q14",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No, service credits cannot be exchanged for cash. They can only be applied to future invoices【sla#1】",
+     "refused": false,
+     "inputTokens": 416,
+     "outputTokens": 70,
+     "latencyMs": 521.5557090000075,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Service credits cannot be exchanged for cash.",
+       "supported": true
+      },
+      {
+       "claim": "Service credits can only be applied to future invoices.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements are directly supported by the SLA document and fully answer the question, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q14",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No, service credits cannot be paid out as cash. They are applied to future invoices and cannot be exchanged for cash [sla#1].",
+     "refused": false,
+     "inputTokens": 383,
+     "outputTokens": 79,
+     "latencyMs": 696.0781669999997,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Service credits cannot be paid out as cash.",
+       "supported": true
+      },
+      {
+       "claim": "Service credits are applied to future invoices and cannot be exchanged for cash.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements directly answer the question and are explicitly stated in document sla#1. The answer matches the reference answer, so it is fully correct."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q15",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Scheduled maintenance normally occurs on Sundays between 02:00 and 04:00 UTC. [sla#0]",
+     "refused": false,
+     "inputTokens": 265,
+     "outputTokens": 95,
+     "latencyMs": 430.61545799998567,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 3,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Scheduled maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer correctly states the scheduled maintenance window as Sundays 02:00‑04:00 UTC, which is supported by the document. However, it omits the additional detail that maintenance is announced at least 72 hours in advance, so it is only partially aligned with the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q15",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Scheduled maintenance normally occurs on Sundays between 02:00 and 04:00 UTC. [sla#0]",
+     "refused": false,
+     "inputTokens": 227,
+     "outputTokens": 81,
+     "latencyMs": 245.43087499999092,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Scheduled maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer provides the exact scheduled maintenance window stated in the document, directly matching the reference answer. The single claim is fully supported by the SLA text."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q16",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No, Northwind is not currently HIPAA compliant. [security#1]",
+     "refused": false,
+     "inputTokens": 470,
+     "outputTokens": 55,
+     "latencyMs": 500.1352079999924,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Northwind is not currently HIPAA compliant.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer provides a single factual claim that matches the document stating Northwind is not HIPAA compliant. The claim is directly supported, fully addresses the question, and aligns with the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q16",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No, Northwind Cloud is **not** currently HIPAA compliant and must not be used to store protected health information [security#1].",
+     "refused": false,
+     "inputTokens": 445,
+     "outputTokens": 88,
+     "latencyMs": 281.0616250000021,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Northwind Cloud is not currently HIPAA compliant",
+       "supported": true
+      },
+      {
+       "claim": "Northwind Cloud must not be used to store protected health information",
+       "supported": true
+      }
+     ],
+     "rationale": "Both factual statements are directly supported by the security document and exactly match the reference answer, making the response fully relevant and correct."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q17",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No. A workspace’s region is fixed at creation time and cannot be changed afterwards. [security#0]",
+     "refused": false,
+     "inputTokens": 524,
+     "outputTokens": 85,
+     "latencyMs": 206.19504200000665,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "A workspace’s region is fixed at creation time and cannot be changed afterwards.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states that the region cannot be changed, which matches the reference answer and is explicitly supported by the security document."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q17",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No, you cannot move your workspace to a different region later. The region is chosen when the workspace is created, and a workspace's region cannot be changed after creation [security#0].",
+     "refused": false,
+     "inputTokens": 502,
+     "outputTokens": 129,
+     "latencyMs": 359.30275000000256,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "You cannot move your workspace to a different region later.",
+       "supported": true
+      },
+      {
+       "claim": "The region is chosen when the workspace is created, and a workspace's region cannot be changed after creation.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements directly reflect the document which says a workspace's region cannot be changed after creation, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q18",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "SCIM user provisioning is available only on the Enterprise plan. [security#2]",
+     "refused": false,
+     "inputTokens": 506,
+     "outputTokens": 72,
+     "latencyMs": 611.9265420000011,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "SCIM user provisioning is available only on the Enterprise plan.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states that only the Enterprise plan includes SCIM provisioning, which is explicitly confirmed by the security document. It fully addresses the question and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q18",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "SCIM user provisioning is available on the **Enterprise** plan only [security#2].",
+     "refused": false,
+     "inputTokens": 492,
+     "outputTokens": 65,
+     "latencyMs": 268.16187500000524,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "SCIM user provisioning is available on the Enterprise plan only",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the fact that only the Enterprise plan includes SCIM provisioning, which is explicitly confirmed by the security document. It fully addresses the question and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q19",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Backups are taken every 6 hours and are retained for 35 days. [security#3]",
+     "refused": false,
+     "inputTokens": 220,
+     "outputTokens": 92,
+     "latencyMs": 351.9594999999972,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Backups are taken every 6 hours",
+       "supported": true
+      },
+      {
+       "claim": "Backups are retained for 35 days",
+       "supported": true
+      }
+     ],
+     "rationale": "Both factual statements are directly found in the provided document, matching the reference answer exactly, and the answer fully addresses the question."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q19",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Backups are taken every 6 hours and are retained for 35 days [security#3].",
+     "refused": false,
+     "inputTokens": 174,
+     "outputTokens": 78,
+     "latencyMs": 241.94758300000103,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Backups are taken every 6 hours",
+       "supported": true
+      },
+      {
+       "claim": "Backups are retained for 35 days",
+       "supported": true
+      }
+     ],
+     "rationale": "Both factual statements are directly supported by the provided document and match the reference answer exactly."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q20",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "The API rate limit on the Team plan is 1,000 requests per minute per token. [api#1]",
+     "refused": false,
+     "inputTokens": 443,
+     "outputTokens": 117,
+     "latencyMs": 504.90616600000067,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The API rate limit on the Team plan is 1,000 requests per minute per token.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer provides the exact rate limit for the Team plan, which is explicitly stated in document api#1, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q20",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "The API rate limit on the Team plan is 1,000 requests per minute per token [api#1].",
+     "refused": false,
+     "inputTokens": 423,
+     "outputTokens": 122,
+     "latencyMs": 352.09608400000434,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The API rate limit on the Team plan is 1,000 requests per minute per token.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the rate limit for the Team plan, which is explicitly given in document api#1. It matches the reference answer, so it is fully correct and on point."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q21",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 474,
+     "outputTokens": 81,
+     "latencyMs": 486.9320000000007,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer correctly abstains because the documents do not contain information about an iPad mobile app. No factual claims are made, so there are no unsupported statements."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q21",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 448,
+     "outputTokens": 166,
+     "latencyMs": 478.5095830000064,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer provides no factual claims and correctly abstains because the documents do not contain information about an iPad mobile app. This matches the reference answer's guidance."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q22",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 489,
+     "outputTokens": 72,
+     "latencyMs": 496.5793340000091,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer correctly abstains because the documents do not provide the CEO's name. No factual claims are made, so all are unsupported by the documents. The response is fully relevant and matches the reference answer's expectation."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q22",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 471,
+     "outputTokens": 126,
+     "latencyMs": 352.9295409999904,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer correctly states that it does not know the CEO based on the provided documents, matching the reference's instruction to abstain. No factual claims are made, so there are no unsupported statements."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q23",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 492,
+     "outputTokens": 68,
+     "latencyMs": 518.9539590000059,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer correctly abstains because the documents do not provide a phone number. No factual claims are made, so there are no unsupported statements."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q23",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 474,
+     "outputTokens": 143,
+     "latencyMs": 392.0368750000198,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer correctly abstains because the documents do not contain a phone number. No factual claims are made, so there are no unsupported statements. It directly addresses the question's information gap, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q24",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 481,
+     "outputTokens": 64,
+     "latencyMs": 445.4090830000059,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 4,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The response contains no factual claims and correctly abstains because the documents do not provide the requested information. This aligns with the reference answer's guidance, making it fully correct, though it only indirectly addresses the question."
+    },
+    {
+     "runId": "run_202610270526_f316",
+     "questionId": "q24",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 460,
+     "outputTokens": 122,
+     "latencyMs": 409.1534999999858,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer correctly refrains from providing information because the documents do not contain any details about official Northwind SDK programming languages, matching the reference answer's abstention. No factual claims are made, so there are no unsupported statements."
+    }
+   ],
+   "retrievals": {
+    "q01": [
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 5.708048511808398
+     },
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 2.2995472536749406
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 2.1278046772273758
+     },
+     {
+      "id": "security#2",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Authentication\n\nSingle sign-on (SSO) via SAML 2.0 is available on Team and Enterprise plans. SCIM user provisioning is available on Enterprise only. Two-factor authentication can be enforced for all members by any workspace admin.",
+      "score": 2.0015107529870177
+     }
+    ],
+    "q02": [
+     {
+      "id": "pricing#1",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Billing\n\nMonthly plans are billed on the first day of each calendar month. Annual plans receive a 20% discount compared with monthly billing. Invoices are emailed to the billing contact and can also be downloaded from the Billing page in the admin console.\n\nNorthwind accepts Visa, Mastercard, and American Express. Enterprise customers may also pay by bank transfer with net-30 terms. PayPal is not accepted.",
+      "score": 5.099524218102909
+     },
+     {
+      "id": "support#0",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Channels\n\nStarter customers can get help through the community forum and email support. Team customers additionally get live chat. Enterprise customers get a dedicated customer success manager and a private Slack channel.",
+      "score": 4.608567989113961
+     },
+     {
+      "id": "refunds#1",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Refunds\n\nMonthly plans are non-refundable, but cancelling stops all future charges. Annual plans can be refunded on a prorated basis if cancelled within the first 60 days of the term. After 60 days, annual plans are not refundable.\n\nRefund requests are processed within 10 business days and are returned to the original payment method.",
+      "score": 4.223759034419318
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 1.365703206097979
+     }
+    ],
+    "q03": [
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 16.66642607638449
+     },
+     {
+      "id": "sla#1",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Service credits\n\nIf monthly uptime falls below the commitment, customers are eligible for service credits. Uptime between 99.0% and the commitment earns a 10% credit on that month's fee. Uptime below 99.0% earns a 25% credit. Credits must be requested within 30 days of the end of the affected month by contacting support.\n\nService credits are applied to future invoices and cannot be exchanged for cash. The maximum credit in any month is 25% of the monthly fee.",
+      "score": 4.041842656104829
+     }
+    ],
+    "q04": [
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 13.370447657734871
+     },
+     {
+      "id": "refunds#0",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Cancellation\n\nWorkspaces can be cancelled from the admin console under Settings > Plan > Cancel subscription. Only workspace owners can cancel; admins cannot.\n\nAfter cancellation, data is retained for 30 days, during which the owner can reactivate the workspace with all content intact. After 30 days, all workspace data is permanently deleted.",
+      "score": 2.063209089578658
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 1.5049436761151835
+     },
+     {
+      "id": "security#0",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Data protection\n\nAll customer data is encrypted at rest with AES-256 and in transit with TLS 1.3. Encryption keys are rotated every 90 days. Enterprise customers can bring their own encryption keys (BYOK) through AWS KMS.\n\nCustomer data is stored in the region chosen when the workspace is created. Available regions are US-East, EU-Frankfurt, and AP-Sydney. A workspace's region cannot be changed after creation.",
+      "score": 1.4271911325730673
+     }
+    ],
+    "q05": [
+     {
+      "id": "pricing#1",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Billing\n\nMonthly plans are billed on the first day of each calendar month. Annual plans receive a 20% discount compared with monthly billing. Invoices are emailed to the billing contact and can also be downloaded from the Billing page in the admin console.\n\nNorthwind accepts Visa, Mastercard, and American Express. Enterprise customers may also pay by bank transfer with net-30 terms. PayPal is not accepted.",
+      "score": 4.394973714677414
+     }
+    ],
+    "q06": [
+     {
+      "id": "pricing#3",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Seats\n\nAdmins can add seats at any time; new seats are prorated for the remainder of the billing period. Removing seats takes effect at the next renewal date, not immediately.",
+      "score": 9.182721420999137
+     },
+     {
+      "id": "refunds#2",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Downgrades\n\nDowngrading from Team to Starter takes effect at the end of the current billing period. If the workspace uses more than 50 GB of storage, the downgrade is blocked until usage is reduced below the Starter limit.",
+      "score": 4.70965680208815
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 1.8370729708470879
+     }
+    ],
+    "q07": [
+     {
+      "id": "refunds#0",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Cancellation\n\nWorkspaces can be cancelled from the admin console under Settings > Plan > Cancel subscription. Only workspace owners can cancel; admins cannot.\n\nAfter cancellation, data is retained for 30 days, during which the owner can reactivate the workspace with all content intact. After 30 days, all workspace data is permanently deleted.",
+      "score": 9.92158888063472
+     },
+     {
+      "id": "security#2",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Authentication\n\nSingle sign-on (SSO) via SAML 2.0 is available on Team and Enterprise plans. SCIM user provisioning is available on Enterprise only. Two-factor authentication can be enforced for all members by any workspace admin.",
+      "score": 2.780004470443882
+     },
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 1.7422333237156855
+     },
+     {
+      "id": "pricing#3",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Seats\n\nAdmins can add seats at any time; new seats are prorated for the remainder of the billing period. Removing seats takes effect at the next renewal date, not immediately.",
+      "score": 1.5814708309733827
+     }
+    ],
+    "q08": [
+     {
+      "id": "refunds#0",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Cancellation\n\nWorkspaces can be cancelled from the admin console under Settings > Plan > Cancel subscription. Only workspace owners can cancel; admins cannot.\n\nAfter cancellation, data is retained for 30 days, during which the owner can reactivate the workspace with all content intact. After 30 days, all workspace data is permanently deleted.",
+      "score": 7.832044318806671
+     },
+     {
+      "id": "security#0",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Data protection\n\nAll customer data is encrypted at rest with AES-256 and in transit with TLS 1.3. Encryption keys are rotated every 90 days. Enterprise customers can bring their own encryption keys (BYOK) through AWS KMS.\n\nCustomer data is stored in the region chosen when the workspace is created. Available regions are US-East, EU-Frankfurt, and AP-Sydney. A workspace's region cannot be changed after creation.",
+      "score": 3.7080729861787036
+     },
+     {
+      "id": "support#2",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Severity levels\n\nPriority-1 means the service is unavailable or data loss is occurring. Priority-2 means a major feature is degraded. Priority-3 covers general questions and minor bugs.",
+      "score": 2.150923032142399
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.4159130670130584
+     }
+    ],
+    "q09": [
+     {
+      "id": "refunds#1",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Refunds\n\nMonthly plans are non-refundable, but cancelling stops all future charges. Annual plans can be refunded on a prorated basis if cancelled within the first 60 days of the term. After 60 days, annual plans are not refundable.\n\nRefund requests are processed within 10 business days and are returned to the original payment method.",
+      "score": 8.35581334666773
+     },
+     {
+      "id": "support#0",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Channels\n\nStarter customers can get help through the community forum and email support. Team customers additionally get live chat. Enterprise customers get a dedicated customer success manager and a private Slack channel.",
+      "score": 4.608567989113961
+     },
+     {
+      "id": "pricing#1",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Billing\n\nMonthly plans are billed on the first day of each calendar month. Annual plans receive a 20% discount compared with monthly billing. Invoices are emailed to the billing contact and can also be downloaded from the Billing page in the admin console.\n\nNorthwind accepts Visa, Mastercard, and American Express. Enterprise customers may also pay by bank transfer with net-30 terms. PayPal is not accepted.",
+      "score": 2.9020373607642016
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 1.365703206097979
+     }
+    ],
+    "q10": [
+     {
+      "id": "refunds#1",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Refunds\n\nMonthly plans are non-refundable, but cancelling stops all future charges. Annual plans can be refunded on a prorated basis if cancelled within the first 60 days of the term. After 60 days, annual plans are not refundable.\n\nRefund requests are processed within 10 business days and are returned to the original payment method.",
+      "score": 6.496721065749828
+     },
+     {
+      "id": "pricing#3",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Seats\n\nAdmins can add seats at any time; new seats are prorated for the remainder of the billing period. Removing seats takes effect at the next renewal date, not immediately.",
+      "score": 2.5121666015592696
+     },
+     {
+      "id": "refunds#2",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Downgrades\n\nDowngrading from Team to Starter takes effect at the end of the current billing period. If the workspace uses more than 50 GB of storage, the downgrade is blocked until usage is reduced below the Starter limit.",
+      "score": 2.354828401044075
+     }
+    ],
+    "q11": [
+     {
+      "id": "refunds#2",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Downgrades\n\nDowngrading from Team to Starter takes effect at the end of the current billing period. If the workspace uses more than 50 GB of storage, the downgrade is blocked until usage is reduced below the Starter limit.",
+      "score": 9.768097854924891
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 2.6656260619272674
+     },
+     {
+      "id": "support#0",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Channels\n\nStarter customers can get help through the community forum and email support. Team customers additionally get live chat. Enterprise customers get a dedicated customer success manager and a private Slack channel.",
+      "score": 2.2629055777512055
+     },
+     {
+      "id": "api#1",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Rate limits\n\nAPI requests are limited to 100 requests per minute per token on Starter, 1,000 per minute on Team, and 5,000 per minute on Enterprise. Requests over the limit receive HTTP 429 with a Retry-After header.",
+      "score": 2.162875370483225
+     }
+    ],
+    "q12": [
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 5.51643489303728
+     },
+     {
+      "id": "sla#1",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Service credits\n\nIf monthly uptime falls below the commitment, customers are eligible for service credits. Uptime between 99.0% and the commitment earns a 10% credit on that month's fee. Uptime below 99.0% earns a 25% credit. Credits must be requested within 30 days of the end of the affected month by contacting support.\n\nService credits are applied to future invoices and cannot be exchanged for cash. The maximum credit in any month is 25% of the monthly fee.",
+      "score": 3.0609574059704525
+     },
+     {
+      "id": "security#3",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Backups\n\nBackups are taken every 6 hours and retained for 35 days. Point-in-time restore is available on Enterprise plans.",
+      "score": 2.135510292653623
+     },
+     {
+      "id": "security#2",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Authentication\n\nSingle sign-on (SSO) via SAML 2.0 is available on Team and Enterprise plans. SCIM user provisioning is available on Enterprise only. Two-factor authentication can be enforced for all members by any workspace admin.",
+      "score": 2.0640491701165797
+     }
+    ],
+    "q13": [
+     {
+      "id": "sla#1",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Service credits\n\nIf monthly uptime falls below the commitment, customers are eligible for service credits. Uptime between 99.0% and the commitment earns a 10% credit on that month's fee. Uptime below 99.0% earns a 25% credit. Credits must be requested within 30 days of the end of the affected month by contacting support.\n\nService credits are applied to future invoices and cannot be exchanged for cash. The maximum credit in any month is 25% of the monthly fee.",
+      "score": 15.213395091325474
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 6.780250045929076
+     },
+     {
+      "id": "support#0",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Channels\n\nStarter customers can get help through the community forum and email support. Team customers additionally get live chat. Enterprise customers get a dedicated customer success manager and a private Slack channel.",
+      "score": 4.608567989113961
+     },
+     {
+      "id": "support#2",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Severity levels\n\nPriority-1 means the service is unavailable or data loss is occurring. Priority-2 means a major feature is degraded. Priority-3 covers general questions and minor bugs.",
+      "score": 2.5548421383921003
+     }
+    ],
+    "q14": [
+     {
+      "id": "sla#1",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Service credits\n\nIf monthly uptime falls below the commitment, customers are eligible for service credits. Uptime between 99.0% and the commitment earns a 10% credit on that month's fee. Uptime below 99.0% earns a 25% credit. Credits must be requested within 30 days of the end of the affected month by contacting support.\n\nService credits are applied to future invoices and cannot be exchanged for cash. The maximum credit in any month is 25% of the monthly fee.",
+      "score": 9.15518507263447
+     },
+     {
+      "id": "support#2",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Severity levels\n\nPriority-1 means the service is unavailable or data loss is occurring. Priority-2 means a major feature is degraded. Priority-3 covers general questions and minor bugs.",
+      "score": 2.5548421383921003
+     },
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 2.2491780739782894
+     }
+    ],
+    "q15": [
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 7.7736571667964665
+     }
+    ],
+    "q16": [
+     {
+      "id": "security#1",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Certifications\n\nNorthwind Cloud holds SOC 2 Type II and ISO 27001 certifications. Audit reports are available to Enterprise customers under NDA. Northwind is not currently HIPAA compliant and must not be used to store protected health information.",
+      "score": 7.219986005726517
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.2393653803301512
+     },
+     {
+      "id": "api#2",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Webhooks\n\nWebhooks deliver events such as file.created and member.added to an HTTPS endpoint. Each delivery is signed with an HMAC-SHA256 signature in the X-Northwind-Signature header. Failed deliveries are retried up to 5 times with exponential backoff over 24 hours.",
+      "score": 1.2033721940669329
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 1.0122829612957178
+     }
+    ],
+    "q17": [
+     {
+      "id": "security#0",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Data protection\n\nAll customer data is encrypted at rest with AES-256 and in transit with TLS 1.3. Encryption keys are rotated every 90 days. Enterprise customers can bring their own encryption keys (BYOK) through AWS KMS.\n\nCustomer data is stored in the region chosen when the workspace is created. Available regions are US-East, EU-Frankfurt, and AP-Sydney. A workspace's region cannot be changed after creation.",
+      "score": 5.301707433670263
+     },
+     {
+      "id": "refunds#0",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Cancellation\n\nWorkspaces can be cancelled from the admin console under Settings > Plan > Cancel subscription. Only workspace owners can cancel; admins cannot.\n\nAfter cancellation, data is retained for 30 days, during which the owner can reactivate the workspace with all content intact. After 30 days, all workspace data is permanently deleted.",
+      "score": 2.063209089578658
+     },
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 1.7422333237156855
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 1.5049436761151835
+     }
+    ],
+    "q18": [
+     {
+      "id": "security#2",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Authentication\n\nSingle sign-on (SSO) via SAML 2.0 is available on Team and Enterprise plans. SCIM user provisioning is available on Enterprise only. Two-factor authentication can be enforced for all members by any workspace admin.",
+      "score": 6.840840490047109
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 4.547366125996314
+     },
+     {
+      "id": "refunds#1",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Refunds\n\nMonthly plans are non-refundable, but cancelling stops all future charges. Annual plans can be refunded on a prorated basis if cancelled within the first 60 days of the term. After 60 days, annual plans are not refundable.\n\nRefund requests are processed within 10 business days and are returned to the original payment method.",
+      "score": 1.4161353776673287
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 1.365703206097979
+     }
+    ],
+    "q19": [
+     {
+      "id": "security#3",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Backups\n\nBackups are taken every 6 hours and retained for 35 days. Point-in-time restore is available on Enterprise plans.",
+      "score": 8.124825125151427
+     }
+    ],
+    "q20": [
+     {
+      "id": "api#1",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Rate limits\n\nAPI requests are limited to 100 requests per minute per token on Starter, 1,000 per minute on Team, and 5,000 per minute on Enterprise. Requests over the limit receive HTTP 429 with a Retry-After header.",
+      "score": 9.18228243969426
+     },
+     {
+      "id": "refunds#2",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Downgrades\n\nDowngrading from Team to Starter takes effect at the end of the current billing period. If the workspace uses more than 50 GB of storage, the downgrade is blocked until usage is reduced below the Starter limit.",
+      "score": 3.355583777537584
+     },
+     {
+      "id": "api#3",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Versioning\n\nThe current API version is v3. Version v2 is deprecated and will stop working on 2027-03-31.",
+      "score": 2.441214701004805
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 2.321364771624168
+     }
+    ],
+    "q21": [
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 3.2902966171525376
+     },
+     {
+      "id": "security#1",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Certifications\n\nNorthwind Cloud holds SOC 2 Type II and ISO 27001 certifications. Audit reports are available to Enterprise customers under NDA. Northwind is not currently HIPAA compliant and must not be used to store protected health information.",
+      "score": 1.7241102308892393
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.2393653803301512
+     },
+     {
+      "id": "api#2",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Webhooks\n\nWebhooks deliver events such as file.created and member.added to an HTTPS endpoint. Each delivery is signed with an HMAC-SHA256 signature in the X-Northwind-Signature header. Failed deliveries are retried up to 5 times with exponential backoff over 24 hours.",
+      "score": 1.2033721940669329
+     }
+    ],
+    "q22": [
+     {
+      "id": "security#1",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Certifications\n\nNorthwind Cloud holds SOC 2 Type II and ISO 27001 certifications. Audit reports are available to Enterprise customers under NDA. Northwind is not currently HIPAA compliant and must not be used to store protected health information.",
+      "score": 3.5897929788084317
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 2.5589157278932246
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 2.4978923003599993
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.2393653803301512
+     }
+    ],
+    "q23": [
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 2.1729653471078016
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 1.7502441392304633
+     },
+     {
+      "id": "security#1",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Certifications\n\nNorthwind Cloud holds SOC 2 Type II and ISO 27001 certifications. Audit reports are available to Enterprise customers under NDA. Northwind is not currently HIPAA compliant and must not be used to store protected health information.",
+      "score": 1.7241102308892393
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.2393653803301512
+     }
+    ],
+    "q24": [
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 3.211831673977198
+     },
+     {
+      "id": "security#1",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Certifications\n\nNorthwind Cloud holds SOC 2 Type II and ISO 27001 certifications. Audit reports are available to Enterprise customers under NDA. Northwind is not currently HIPAA compliant and must not be used to store protected health information.",
+      "score": 1.7241102308892393
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.2393653803301512
+     },
+     {
+      "id": "api#2",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Webhooks\n\nWebhooks deliver events such as file.created and member.added to an HTTPS endpoint. Each delivery is signed with an HMAC-SHA256 signature in the X-Northwind-Signature header. Failed deliveries are retried up to 5 times with exponential backoff over 24 hours.",
+      "score": 1.2033721940669329
+     }
+    ]
+   }
+  },
+  {
+   "run": {
+    "id": "run_202610270507_df99",
+    "createdAt": "2026-10-27T05:07:16.600Z",
+    "status": "done",
+    "config": {
+     "dataset": "northwind",
+     "models": [
+      "groq:openai/gpt-oss-20b",
+      "groq:qwen/qwen3.8-27b"
+     ],
+     "baseline": "groq:openai/gpt-oss-20b",
+     "judgeModel": "groq:openai/gpt-oss-120b",
+     "topK": 4,
+     "effort": "medium",
+     "provider": "live"
+    },
+    "questionCount": 24,
+    "error": null,
+    "questions": [
+     {
+      "id": "q01",
+      "question": "How much does the Team plan cost?",
+      "reference": "$29 per user per month."
+     },
+     {
+      "id": "q02",
+      "question": "What discount do annual plans get?",
+      "reference": "20% compared with monthly billing."
+     },
+     {
+      "id": "q03",
+      "question": "Do I need a credit card to start a free trial, and how long is it?",
+      "reference": "No credit card is required; the trial is 14 days of the Team plan."
+     },
+     {
+      "id": "q04",
+      "question": "What happens to my workspace when the free trial ends?",
+      "reference": "It is downgraded to read-only mode until a plan is selected."
+     },
+     {
+      "id": "q05",
+      "question": "Can I pay with PayPal?",
+      "reference": "No. Northwind accepts Visa, Mastercard and American Express; Enterprise can also pay by bank transfer."
+     },
+     {
+      "id": "q06",
+      "question": "If I remove seats, when does it take effect?",
+      "reference": "At the next renewal date, not immediately."
+     },
+     {
+      "id": "q07",
+      "question": "Can an admin cancel the workspace subscription?",
+      "reference": "No, only workspace owners can cancel."
+     },
+     {
+      "id": "q08",
+      "question": "How long is data kept after I cancel?",
+      "reference": "30 days, during which the owner can reactivate; after that it is permanently deleted."
+     },
+     {
+      "id": "q09",
+      "question": "Can I get a refund on an annual plan?",
+      "reference": "Yes, prorated, if cancelled within the first 60 days of the term; not after."
+     },
+     {
+      "id": "q10",
+      "question": "How long do refunds take to process?",
+      "reference": "Within 10 business days, returned to the original payment method."
+     },
+     {
+      "id": "q11",
+      "question": "Why might my downgrade from Team to Starter be blocked?",
+      "reference": "If the workspace uses more than 50 GB of storage."
+     },
+     {
+      "id": "q12",
+      "question": "What uptime does the Enterprise plan guarantee?",
+      "reference": "99.99% monthly uptime."
+     },
+     {
+      "id": "q13",
+      "question": "What service credit do I get if uptime drops below 99.0%?",
+      "reference": "A 25% credit on that month's fee."
+     },
+     {
+      "id": "q14",
+      "question": "Can service credits be paid out as cash?",
+      "reference": "No, they are applied to future invoices only."
+     },
+     {
+      "id": "q15",
+      "question": "When does scheduled maintenance normally happen?",
+      "reference": "Sundays between 02:00 and 04:00 UTC, announced at least 72 hours in advance."
+     },
+     {
+      "id": "q16",
+      "question": "Is Northwind HIPAA compliant?",
+      "reference": "No, it is not HIPAA compliant and must not store protected health information."
+     },
+     {
+      "id": "q17",
+      "question": "Can I move my workspace to a different region later?",
+      "reference": "No, the region cannot be changed after creation."
+     },
+     {
+      "id": "q18",
+      "question": "Which plans include SCIM provisioning?",
+      "reference": "Enterprise only."
+     },
+     {
+      "id": "q19",
+      "question": "How often are backups taken and how long are they kept?",
+      "reference": "Every 6 hours, retained for 35 days."
+     },
+     {
+      "id": "q20",
+      "question": "What is the API rate limit on the Team plan?",
+      "reference": "1,000 requests per minute per token."
+     },
+     {
+      "id": "q21",
+      "question": "Does Northwind offer a mobile app for iPad?",
+      "unanswerable": true
+     },
+     {
+      "id": "q22",
+      "question": "Who is the CEO of Northwind Cloud?",
+      "unanswerable": true
+     },
+     {
+      "id": "q23",
+      "question": "What is the phone number for the Northwind sales team?",
+      "unanswerable": true
+     },
+     {
+      "id": "q24",
+      "question": "Which programming languages have official Northwind SDKs?",
+      "unanswerable": true
+     }
+    ]
+   },
+   "results": [
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q01",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "The Team plan costs $29 per user per month. [pricing#0]",
+     "refused": false,
+     "inputTokens": 490,
+     "outputTokens": 73,
+     "latencyMs": 449.542417,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The Team plan costs $29 per user per month.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer provides the exact cost of the Team plan, which is explicitly stated in document pricing#0. The claim is supported, directly addresses the question, and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q01",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "The Team plan costs $29 per user per month and includes 1 TB of storage per workspace [pricing#0].",
+     "refused": false,
+     "inputTokens": 466,
+     "outputTokens": 71,
+     "latencyMs": 237.518417,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The Team plan costs $29 per user per month.",
+       "supported": true
+      },
+      {
+       "claim": "The Team plan includes 1 TB of storage per workspace.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both factual statements are directly confirmed by the pricing document. The answer directly addresses the question about cost and adds correct additional information, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q02",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Annual plans receive a 20% discount compared with monthly billing. [pricing#1]",
+     "refused": false,
+     "inputTokens": 507,
+     "outputTokens": 70,
+     "latencyMs": 497.8520840000001,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Annual plans receive a 20% discount compared with monthly billing.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the discount, which matches the reference answer and is explicitly confirmed by the pricing document."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q02",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Annual plans receive a 20% discount compared with monthly billing [pricing#1].",
+     "refused": false,
+     "inputTokens": 491,
+     "outputTokens": 58,
+     "latencyMs": 443.6785410000002,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Annual plans receive a 20% discount compared with monthly billing.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the discount amount, which matches the reference answer and is explicitly stated in the pricing document, making it fully supported and on-topic."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q03",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No credit card is required to start the trial, and it lasts 14 days. [pricing#2]",
+     "refused": false,
+     "inputTokens": 371,
+     "outputTokens": 120,
+     "latencyMs": 597.2950840000003,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "No credit card is required to start the trial",
+       "supported": true
+      },
+      {
+       "claim": "The trial lasts 14 days",
+       "supported": true
+      }
+     ],
+     "rationale": "Both factual statements are explicitly present in the pricing document, matching the reference answer and directly addressing the question."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q03",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No, a credit card is not required to start a free trial. The trial lasts 14 days and gives you access to the Team plan. [pricing#2]",
+     "refused": false,
+     "inputTokens": 335,
+     "outputTokens": 117,
+     "latencyMs": 376.43062499999996,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "A credit card is not required to start a free trial.",
+       "supported": true
+      },
+      {
+       "claim": "The trial lasts 14 days and gives access to the Team plan.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements are directly stated in the pricing document, fully answering the question and matching the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q04",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "When the 14‑day free trial ends, your workspace is automatically downgraded to read‑only mode until you choose a paid plan. [pricing#2]",
+     "refused": false,
+     "inputTokens": 524,
+     "outputTokens": 154,
+     "latencyMs": 613.6845410000005,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "When the 14‑day free trial ends, your workspace is automatically downgraded to read‑only mode until you choose a paid plan.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer provides the correct outcome of the free trial ending, which is directly stated in the pricing#2 document, making the claim supported and fully matching the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q04",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "When your 14-day free trial ends, your workspace is downgraded to read-only mode until you select a paid plan [pricing#2]. No credit card is required to start the trial, so you won't be automatically charged, but you'll lose edit access until a plan is chosen [pricing#2].",
+     "refused": false,
+     "inputTokens": 502,
+     "outputTokens": 130,
+     "latencyMs": 358.3161659999987,
+     "costUsd": 0,
+     "faithfulness": 0.6666666666666666,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "When the 14-day free trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+       "supported": true
+      },
+      {
+       "claim": "No credit card is required to start the trial.",
+       "supported": true
+      },
+      {
+       "claim": "You won't be automatically charged when the trial ends.",
+       "supported": false
+      }
+     ],
+     "rationale": "The answer correctly states the downgrade to read-only mode and that no credit card is needed to start, both backed by the documents. The claim about not being automatically charged is not mentioned in the provided sources."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q05",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No, PayPal is not accepted for payment. [pricing#1]",
+     "refused": false,
+     "inputTokens": 271,
+     "outputTokens": 51,
+     "latencyMs": 494.60491700000057,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "PayPal is not accepted for payment.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer contains a single factual claim that PayPal is not accepted, which is explicitly stated in the provided document, making it fully supported. It directly answers the question, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q05",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No, PayPal is not accepted by Northwind. They accept Visa, Mastercard, American Express, and bank transfer (for Enterprise customers with net-30 terms) [pricing#1].",
+     "refused": false,
+     "inputTokens": 225,
+     "outputTokens": 76,
+     "latencyMs": 231.16391700000167,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "PayPal is not accepted by Northwind.",
+       "supported": true
+      },
+      {
+       "claim": "They accept Visa, Mastercard, American Express, and bank transfer (for Enterprise customers with net-30 terms).",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements are directly supported by the document and fully answer the question, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q06",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Removing seats takes effect at the next renewal date, not immediately. [pricing#3]",
+     "refused": false,
+     "inputTokens": 385,
+     "outputTokens": 88,
+     "latencyMs": 509.8350419999988,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Removing seats takes effect at the next renewal date, not immediately.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer repeats the statement from pricing#3 verbatim, directly answering the question. The claim is supported by the document, fully relevant, and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q06",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Removing seats takes effect at the next renewal date, not immediately [pricing#3].",
+     "refused": false,
+     "inputTokens": 351,
+     "outputTokens": 64,
+     "latencyMs": 504.32679199999984,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Removing seats takes effect at the next renewal date, not immediately.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer restates the policy from pricing#3 verbatim, directly addressing the question. The claim is supported by the document, and it matches the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q07",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No. Only the workspace owner can cancel a subscription; admins cannot. [refunds#0]",
+     "refused": false,
+     "inputTokens": 448,
+     "outputTokens": 133,
+     "latencyMs": 588.9757909999971,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Only the workspace owner can cancel a subscription; admins cannot.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly addresses the question and matches the reference answer. The document refunds#0 explicitly states that only workspace owners can cancel and admins cannot, so the claim is fully supported."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q07",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No, an admin cannot cancel the workspace subscription. Only the workspace owner can cancel it. The cancellation is done from the admin console under Settings > Plan > Cancel subscription, but the admin (as opposed to the workspace owner) is explicitly not permitted to perform this action [refunds#0].",
+     "refused": false,
+     "inputTokens": 417,
+     "outputTokens": 132,
+     "latencyMs": 352.3957919999957,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "An admin cannot cancel the workspace subscription.",
+       "supported": true
+      },
+      {
+       "claim": "Only the workspace owner can cancel the workspace subscription.",
+       "supported": true
+      },
+      {
+       "claim": "Cancellation is done from the admin console under Settings > Plan > Cancel subscription.",
+       "supported": true
+      }
+     ],
+     "rationale": "All three factual statements are directly supported by the Refund and Cancellation Policy document, and the answer aligns exactly with the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q08",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Data is retained for 30 days after cancellation. After that period, all workspace data is permanently deleted. [refunds#0]",
+     "refused": false,
+     "inputTokens": 487,
+     "outputTokens": 114,
+     "latencyMs": 562.4752079999962,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Data is retained for 30 days after cancellation.",
+       "supported": true
+      },
+      {
+       "claim": "After that period, all workspace data is permanently deleted.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both factual claims are directly stated in the Refund and Cancellation Policy document, matching the reference answer exactly, and the answer directly addresses the question."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q08",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "After cancellation, your data is retained for 30 days, during which the workspace owner can reactivate the workspace with all content intact. After 30 days, all workspace data is permanently deleted. [refunds#0]",
+     "refused": false,
+     "inputTokens": 461,
+     "outputTokens": 123,
+     "latencyMs": 424.8745829999971,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "After cancellation, your data is retained for 30 days, during which the workspace owner can reactivate the workspace with all content intact.",
+       "supported": true
+      },
+      {
+       "claim": "After 30 days, all workspace data is permanently deleted.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements are directly taken from the Refund and Cancellation Policy document, matching the reference answer precisely, and fully address the question."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q09",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Yes—if you cancel an annual plan within the first 60 days of the term, you can receive a prorated refund. After 60 days the annual plan is non‑refundable. [refunds#1]",
+     "refused": false,
+     "inputTokens": 510,
+     "outputTokens": 122,
+     "latencyMs": 540.8752080000049,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "You can receive a prorated refund if you cancel an annual plan within the first 60 days of the term.",
+       "supported": true
+      },
+      {
+       "claim": "After 60 days the annual plan is non‑refundable.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements are explicitly stated in the Refund and Cancellation Policy document, directly answering the question and matching the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q09",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Yes, but only within the first 60 days of the term. Annual plans can be refunded on a prorated basis if cancelled within that window. After 60 days, they are no longer refundable. Refund requests are processed within 10 business days and returned to the original payment method [refunds#1].",
+     "refused": false,
+     "inputTokens": 494,
+     "outputTokens": 157,
+     "latencyMs": 404.21808299999975,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Annual plans can be refunded on a prorated basis if cancelled within the first 60 days of the term.",
+       "supported": true
+      },
+      {
+       "claim": "After 60 days, they are no longer refundable.",
+       "supported": true
+      },
+      {
+       "claim": "Refund requests are processed within 10 business days and returned to the original payment method.",
+       "supported": true
+      }
+     ],
+     "rationale": "All three factual statements are directly supported by the Refund and Cancellation Policy document, and the answer fully addresses the question and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q10",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Refunds are processed within 10 business days and returned to the original payment method. [refunds#1]",
+     "refused": false,
+     "inputTokens": 381,
+     "outputTokens": 90,
+     "latencyMs": 493.21137499999895,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Refunds are processed within 10 business days and returned to the original payment method.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the processing time and method, matching the reference answer and the information in refunds#1, so it is fully relevant, correct, and the claim is supported."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q10",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Refund requests are processed within 10 business days and are returned to the original payment method [refunds#1].",
+     "refused": false,
+     "inputTokens": 352,
+     "outputTokens": 82,
+     "latencyMs": 369.21912500000326,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Refund requests are processed within 10 business days and are returned to the original payment method.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer restates the exact information from document refunds#1, directly answering the question about processing time. The claim is fully supported and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q11",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Your downgrade may be blocked if your workspace is using more than the Starter plan’s storage limit of 50 GB. The policy states that a downgrade is only permitted once usage falls below that limit [refunds#2].",
+     "refused": false,
+     "inputTokens": 450,
+     "outputTokens": 132,
+     "latencyMs": 757.1698329999927,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Your downgrade may be blocked if your workspace is using more than the Starter plan’s storage limit of 50 GB.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the condition that triggers a block, which is exactly supported by the Refund and Cancellation Policy document and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q11",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Your downgrade from Team to Starter will be blocked if your workspace currently uses more than 50 GB of storage, which is the Starter plan's storage limit. The downgrade is blocked until you reduce your usage below that threshold [refunds#2].",
+     "refused": false,
+     "inputTokens": 427,
+     "outputTokens": 122,
+     "latencyMs": 384.26229199999943,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Your downgrade from Team to Starter will be blocked if your workspace currently uses more than 50 GB of storage.",
+       "supported": true
+      },
+      {
+       "claim": "The downgrade is blocked until you reduce your usage below that threshold.",
+       "supported": true
+      }
+     ],
+     "rationale": "Both statements are directly stated in the Refund and Cancellation Policy document, matching the reference answer, and fully address the question."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q12",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "The Enterprise plan guarantees 99.99% monthly uptime. [sla#0]",
+     "refused": false,
+     "inputTokens": 499,
+     "outputTokens": 88,
+     "latencyMs": 505.8647500000079,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The Enterprise plan guarantees 99.99% monthly uptime.",
+       "supported": true
+      }
+     ],
+     "rationale": "The claim directly matches the SLA document stating 99.99% monthly uptime for Enterprise plans and aligns exactly with the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q12",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "The Enterprise plan guarantees 99.99% monthly uptime. [sla#0]",
+     "refused": false,
+     "inputTokens": 479,
+     "outputTokens": 104,
+     "latencyMs": 419.49183299999277,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The Enterprise plan guarantees 99.99% monthly uptime.",
+       "supported": true
+      }
+     ],
+     "rationale": "The claim directly matches the SLA document stating 99.99% monthly uptime for Enterprise plans and aligns exactly with the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q13",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "A 25% credit on that month's fee. [sla#1]",
+     "refused": false,
+     "inputTokens": 502,
+     "outputTokens": 91,
+     "latencyMs": 581.4327499999927,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "A 25% credit on that month's fee.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer states a 25% credit, which is explicitly mentioned in document sla#1 for uptime below 99.0%. It directly addresses the question and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q13",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "If monthly uptime falls below 99.0%, you earn a **25% service credit** on that month's fee [sla#1]. Credits must be requested within 30 days of the end of the affected month by contacting support, and they are applied to future invoices (not cash) [sla#1].",
+     "refused": false,
+     "inputTokens": 483,
+     "outputTokens": 117,
+     "latencyMs": 332.0997090000019,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "If monthly uptime falls below 99.0%, you earn a 25% service credit on that month's fee.",
+       "supported": true
+      },
+      {
+       "claim": "Credits must be requested within 30 days of the end of the affected month by contacting support.",
+       "supported": true
+      },
+      {
+       "claim": "Credits are applied to future invoices and cannot be exchanged for cash.",
+       "supported": true
+      }
+     ],
+     "rationale": "All three factual statements are explicitly present in document sla#1, and the answer directly addresses the question about the credit amount, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q14",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No – service credits can only be applied to future invoices and cannot be exchanged for cash. [sla#1]",
+     "refused": false,
+     "inputTokens": 416,
+     "outputTokens": 92,
+     "latencyMs": 486.0673749999987,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Service credits can only be applied to future invoices and cannot be exchanged for cash.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states that credits are applied to future invoices and not payable in cash, which is explicitly confirmed by the SLA document; it fully answers the question and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q14",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No. Service credits are applied to future invoices and cannot be exchanged for cash. [sla#1]",
+     "refused": false,
+     "inputTokens": 383,
+     "outputTokens": 72,
+     "latencyMs": 316.2144169999956,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Service credits are applied to future invoices and cannot be exchanged for cash.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly addresses the question with a single factual claim that is explicitly stated in document sla#1. It matches the reference answer, so it is fully correct and highly relevant."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q15",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Scheduled maintenance normally happens on Sundays between 02:00 and 04:00 UTC. [sla#0]",
+     "refused": false,
+     "inputTokens": 265,
+     "outputTokens": 64,
+     "latencyMs": 458.5430420000048,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 4,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Scheduled maintenance normally happens on Sundays between 02:00 and 04:00 UTC.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer correctly states the scheduled maintenance window, which is supported by the document. However, it omits the additional detail that maintenance is announced at least 72 hours in advance, so it is not fully aligned with the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q15",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Scheduled maintenance normally occurs on Sundays between 02:00 and 04:00 UTC [sla#0].",
+     "refused": false,
+     "inputTokens": 227,
+     "outputTokens": 69,
+     "latencyMs": 233.23904200000106,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Scheduled maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the scheduled maintenance window, which matches the document and the reference answer, so it is fully relevant, correct, and the claim is supported."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q16",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No, Northwind is not currently HIPAA compliant and must not be used to store protected health information. [security#1]",
+     "refused": false,
+     "inputTokens": 470,
+     "outputTokens": 95,
+     "latencyMs": 460.0182919999934,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Northwind is not currently HIPAA compliant",
+       "supported": true
+      },
+      {
+       "claim": "Northwind must not be used to store protected health information",
+       "supported": true
+      }
+     ],
+     "rationale": "Both factual statements are directly supported by the Security and Compliance document, and the answer directly and correctly answers the question, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q16",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No, Northwind is not currently HIPAA compliant and must not be used to store protected health information [security#1].",
+     "refused": false,
+     "inputTokens": 445,
+     "outputTokens": 74,
+     "latencyMs": 266.0417090000119,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Northwind is not currently HIPAA compliant",
+       "supported": true
+      },
+      {
+       "claim": "Northwind must not be used to store protected health information",
+       "supported": true
+      }
+     ],
+     "rationale": "Both factual statements are directly supported by the security document, and the answer matches the reference answer, fully addressing the question."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q17",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "No – the region you select when the workspace is created is fixed and cannot be changed later. [security#0]",
+     "refused": false,
+     "inputTokens": 524,
+     "outputTokens": 145,
+     "latencyMs": 622.5212089999986,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The region you select when the workspace is created is fixed and cannot be changed later.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly addresses the question with a single factual claim that matches the document stating a workspace's region cannot be changed after creation, and it aligns perfectly with the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q17",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "No. A workspace's region cannot be changed after creation. The region is selected at the time the workspace is created, and the available regions are US-East, EU-Frankfurt, and AP-Sydney [security#0].",
+     "refused": false,
+     "inputTokens": 502,
+     "outputTokens": 139,
+     "latencyMs": 411.7946669999801,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "A workspace's region cannot be changed after creation.",
+       "supported": true
+      },
+      {
+       "claim": "The region is selected at the time the workspace is created.",
+       "supported": true
+      },
+      {
+       "claim": "The available regions are US-East, EU-Frankfurt, and AP-Sydney.",
+       "supported": true
+      }
+     ],
+     "rationale": "All three factual statements are directly supported by the security document, and the answer directly addresses the question, matching the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q18",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "The Enterprise plan includes SCIM user provisioning. [security#2]",
+     "refused": false,
+     "inputTokens": 506,
+     "outputTokens": 102,
+     "latencyMs": 497.8133749999979,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The Enterprise plan includes SCIM user provisioning.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer provides the correct plan (Enterprise) and is directly supported by the security document; it fully addresses the question."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q18",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "SCIM user provisioning is available on the **Enterprise** plan only [security#2].",
+     "refused": false,
+     "inputTokens": 492,
+     "outputTokens": 56,
+     "latencyMs": 363.13174999997136,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "SCIM user provisioning is available on the Enterprise plan only",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer states that SCIM provisioning is only on the Enterprise plan, which is directly supported by security#2 and matches the reference answer. The response is fully on-topic."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q19",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "Backups are taken every 6 hours and retained for 35 days. [security#3]",
+     "refused": false,
+     "inputTokens": 220,
+     "outputTokens": 112,
+     "latencyMs": 657.1500000000233,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Backups are taken every 6 hours and retained for 35 days.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer repeats the exact information from the document, matching the reference answer, and directly addresses the question."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q19",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "Backups are taken every 6 hours and retained for 35 days [security#3].",
+     "refused": false,
+     "inputTokens": 174,
+     "outputTokens": 77,
+     "latencyMs": 241.48466699998244,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "Backups are taken every 6 hours and retained for 35 days",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the backup frequency and retention period, which exactly matches the information in the provided document and the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q20",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "The Team plan allows 1,000 API requests per minute per token. [api#1]",
+     "refused": false,
+     "inputTokens": 443,
+     "outputTokens": 97,
+     "latencyMs": 547.1635839999944,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The Team plan allows 1,000 API requests per minute per token.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer correctly states the rate limit for the Team plan, which is explicitly given in document api#1. It directly answers the question and matches the reference answer."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q20",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "The API rate limit on the Team plan is 1,000 requests per minute per token [api#1].",
+     "refused": false,
+     "inputTokens": 423,
+     "outputTokens": 118,
+     "latencyMs": 329.46924999999464,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": false,
+     "claims": [
+      {
+       "claim": "The API rate limit on the Team plan is 1,000 requests per minute per token.",
+       "supported": true
+      }
+     ],
+     "rationale": "The answer directly states the rate limit for the Team plan, which matches the reference answer and is explicitly confirmed by document api#1."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q21",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 474,
+     "outputTokens": 49,
+     "latencyMs": 509.57079199998407,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 4,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer provides no factual claims and correctly abstains because the documents do not mention a mobile app for iPad. This matches the reference answer's guidance."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q21",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 448,
+     "outputTokens": 147,
+     "latencyMs": 512.2485829999787,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer contains no factual claims and correctly abstains because the documents do not provide information about an iPad mobile app. This matches the reference answer's abstention."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q22",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 489,
+     "outputTokens": 89,
+     "latencyMs": 503.3949999999895,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 4,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer correctly refrains from providing a CEO name, matching the reference which states the information is absent. No factual claims are made, so there are no unsupported statements."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q22",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 471,
+     "outputTokens": 166,
+     "latencyMs": 457.7487090000068,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer provides no factual claims and correctly states that the information is not available in the documents, matching the reference answer's expectation to abstain."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q23",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 492,
+     "outputTokens": 74,
+     "latencyMs": 527.8344159999979,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 5,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer contains no factual claims and correctly abstains because the documents do not provide a phone number. This matches the reference answer's guidance."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q23",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 474,
+     "outputTokens": 161,
+     "latencyMs": 415.1514170000155,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 4,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer provides no factual claims and correctly abstains because the documents do not contain a phone number. This aligns with the reference answer, earning full correctness. Relevance is high as it directly addresses the question by noting the lack of information."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q24",
+     "model": "groq:openai/gpt-oss-20b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 481,
+     "outputTokens": 86,
+     "latencyMs": 618.8507919999829,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 4,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer correctly abstains because the provided documents contain no information about official SDK programming languages. No factual claims are made, so there are no unsupported statements."
+    },
+    {
+     "runId": "run_202610270507_df99",
+     "questionId": "q24",
+     "model": "groq:qwen/qwen3.8-27b",
+     "answer": "I don't know based on the provided documents.",
+     "refused": false,
+     "inputTokens": 460,
+     "outputTokens": 137,
+     "latencyMs": 384.6175419999927,
+     "costUsd": 0,
+     "faithfulness": 1,
+     "relevance": 4,
+     "correctness": 5,
+     "abstained": true,
+     "claims": [],
+     "rationale": "The answer correctly abstains because the documents do not provide information about official SDK languages. No factual claims are made, so there are no unsupported statements. The response is relevant to the question by indicating lack of information."
+    }
+   ],
+   "retrievals": {
+    "q01": [
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 5.708048511808398
+     },
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 2.2995472536749406
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 2.1278046772273758
+     },
+     {
+      "id": "security#2",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Authentication\n\nSingle sign-on (SSO) via SAML 2.0 is available on Team and Enterprise plans. SCIM user provisioning is available on Enterprise only. Two-factor authentication can be enforced for all members by any workspace admin.",
+      "score": 2.0015107529870177
+     }
+    ],
+    "q02": [
+     {
+      "id": "pricing#1",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Billing\n\nMonthly plans are billed on the first day of each calendar month. Annual plans receive a 20% discount compared with monthly billing. Invoices are emailed to the billing contact and can also be downloaded from the Billing page in the admin console.\n\nNorthwind accepts Visa, Mastercard, and American Express. Enterprise customers may also pay by bank transfer with net-30 terms. PayPal is not accepted.",
+      "score": 5.099524218102909
+     },
+     {
+      "id": "support#0",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Channels\n\nStarter customers can get help through the community forum and email support. Team customers additionally get live chat. Enterprise customers get a dedicated customer success manager and a private Slack channel.",
+      "score": 4.608567989113961
+     },
+     {
+      "id": "refunds#1",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Refunds\n\nMonthly plans are non-refundable, but cancelling stops all future charges. Annual plans can be refunded on a prorated basis if cancelled within the first 60 days of the term. After 60 days, annual plans are not refundable.\n\nRefund requests are processed within 10 business days and are returned to the original payment method.",
+      "score": 4.223759034419318
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 1.365703206097979
+     }
+    ],
+    "q03": [
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 16.66642607638449
+     },
+     {
+      "id": "sla#1",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Service credits\n\nIf monthly uptime falls below the commitment, customers are eligible for service credits. Uptime between 99.0% and the commitment earns a 10% credit on that month's fee. Uptime below 99.0% earns a 25% credit. Credits must be requested within 30 days of the end of the affected month by contacting support.\n\nService credits are applied to future invoices and cannot be exchanged for cash. The maximum credit in any month is 25% of the monthly fee.",
+      "score": 4.041842656104829
+     }
+    ],
+    "q04": [
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 13.370447657734871
+     },
+     {
+      "id": "refunds#0",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Cancellation\n\nWorkspaces can be cancelled from the admin console under Settings > Plan > Cancel subscription. Only workspace owners can cancel; admins cannot.\n\nAfter cancellation, data is retained for 30 days, during which the owner can reactivate the workspace with all content intact. After 30 days, all workspace data is permanently deleted.",
+      "score": 2.063209089578658
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 1.5049436761151835
+     },
+     {
+      "id": "security#0",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Data protection\n\nAll customer data is encrypted at rest with AES-256 and in transit with TLS 1.3. Encryption keys are rotated every 90 days. Enterprise customers can bring their own encryption keys (BYOK) through AWS KMS.\n\nCustomer data is stored in the region chosen when the workspace is created. Available regions are US-East, EU-Frankfurt, and AP-Sydney. A workspace's region cannot be changed after creation.",
+      "score": 1.4271911325730673
+     }
+    ],
+    "q05": [
+     {
+      "id": "pricing#1",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Billing\n\nMonthly plans are billed on the first day of each calendar month. Annual plans receive a 20% discount compared with monthly billing. Invoices are emailed to the billing contact and can also be downloaded from the Billing page in the admin console.\n\nNorthwind accepts Visa, Mastercard, and American Express. Enterprise customers may also pay by bank transfer with net-30 terms. PayPal is not accepted.",
+      "score": 4.394973714677414
+     }
+    ],
+    "q06": [
+     {
+      "id": "pricing#3",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Seats\n\nAdmins can add seats at any time; new seats are prorated for the remainder of the billing period. Removing seats takes effect at the next renewal date, not immediately.",
+      "score": 9.182721420999137
+     },
+     {
+      "id": "refunds#2",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Downgrades\n\nDowngrading from Team to Starter takes effect at the end of the current billing period. If the workspace uses more than 50 GB of storage, the downgrade is blocked until usage is reduced below the Starter limit.",
+      "score": 4.70965680208815
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 1.8370729708470879
+     }
+    ],
+    "q07": [
+     {
+      "id": "refunds#0",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Cancellation\n\nWorkspaces can be cancelled from the admin console under Settings > Plan > Cancel subscription. Only workspace owners can cancel; admins cannot.\n\nAfter cancellation, data is retained for 30 days, during which the owner can reactivate the workspace with all content intact. After 30 days, all workspace data is permanently deleted.",
+      "score": 9.92158888063472
+     },
+     {
+      "id": "security#2",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Authentication\n\nSingle sign-on (SSO) via SAML 2.0 is available on Team and Enterprise plans. SCIM user provisioning is available on Enterprise only. Two-factor authentication can be enforced for all members by any workspace admin.",
+      "score": 2.780004470443882
+     },
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 1.7422333237156855
+     },
+     {
+      "id": "pricing#3",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Seats\n\nAdmins can add seats at any time; new seats are prorated for the remainder of the billing period. Removing seats takes effect at the next renewal date, not immediately.",
+      "score": 1.5814708309733827
+     }
+    ],
+    "q08": [
+     {
+      "id": "refunds#0",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Cancellation\n\nWorkspaces can be cancelled from the admin console under Settings > Plan > Cancel subscription. Only workspace owners can cancel; admins cannot.\n\nAfter cancellation, data is retained for 30 days, during which the owner can reactivate the workspace with all content intact. After 30 days, all workspace data is permanently deleted.",
+      "score": 7.832044318806671
+     },
+     {
+      "id": "security#0",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Data protection\n\nAll customer data is encrypted at rest with AES-256 and in transit with TLS 1.3. Encryption keys are rotated every 90 days. Enterprise customers can bring their own encryption keys (BYOK) through AWS KMS.\n\nCustomer data is stored in the region chosen when the workspace is created. Available regions are US-East, EU-Frankfurt, and AP-Sydney. A workspace's region cannot be changed after creation.",
+      "score": 3.7080729861787036
+     },
+     {
+      "id": "support#2",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Severity levels\n\nPriority-1 means the service is unavailable or data loss is occurring. Priority-2 means a major feature is degraded. Priority-3 covers general questions and minor bugs.",
+      "score": 2.150923032142399
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.4159130670130584
+     }
+    ],
+    "q09": [
+     {
+      "id": "refunds#1",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Refunds\n\nMonthly plans are non-refundable, but cancelling stops all future charges. Annual plans can be refunded on a prorated basis if cancelled within the first 60 days of the term. After 60 days, annual plans are not refundable.\n\nRefund requests are processed within 10 business days and are returned to the original payment method.",
+      "score": 8.35581334666773
+     },
+     {
+      "id": "support#0",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Channels\n\nStarter customers can get help through the community forum and email support. Team customers additionally get live chat. Enterprise customers get a dedicated customer success manager and a private Slack channel.",
+      "score": 4.608567989113961
+     },
+     {
+      "id": "pricing#1",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Billing\n\nMonthly plans are billed on the first day of each calendar month. Annual plans receive a 20% discount compared with monthly billing. Invoices are emailed to the billing contact and can also be downloaded from the Billing page in the admin console.\n\nNorthwind accepts Visa, Mastercard, and American Express. Enterprise customers may also pay by bank transfer with net-30 terms. PayPal is not accepted.",
+      "score": 2.9020373607642016
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 1.365703206097979
+     }
+    ],
+    "q10": [
+     {
+      "id": "refunds#1",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Refunds\n\nMonthly plans are non-refundable, but cancelling stops all future charges. Annual plans can be refunded on a prorated basis if cancelled within the first 60 days of the term. After 60 days, annual plans are not refundable.\n\nRefund requests are processed within 10 business days and are returned to the original payment method.",
+      "score": 6.496721065749828
+     },
+     {
+      "id": "pricing#3",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Seats\n\nAdmins can add seats at any time; new seats are prorated for the remainder of the billing period. Removing seats takes effect at the next renewal date, not immediately.",
+      "score": 2.5121666015592696
+     },
+     {
+      "id": "refunds#2",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Downgrades\n\nDowngrading from Team to Starter takes effect at the end of the current billing period. If the workspace uses more than 50 GB of storage, the downgrade is blocked until usage is reduced below the Starter limit.",
+      "score": 2.354828401044075
+     }
+    ],
+    "q11": [
+     {
+      "id": "refunds#2",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Downgrades\n\nDowngrading from Team to Starter takes effect at the end of the current billing period. If the workspace uses more than 50 GB of storage, the downgrade is blocked until usage is reduced below the Starter limit.",
+      "score": 9.768097854924891
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 2.6656260619272674
+     },
+     {
+      "id": "support#0",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Channels\n\nStarter customers can get help through the community forum and email support. Team customers additionally get live chat. Enterprise customers get a dedicated customer success manager and a private Slack channel.",
+      "score": 2.2629055777512055
+     },
+     {
+      "id": "api#1",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Rate limits\n\nAPI requests are limited to 100 requests per minute per token on Starter, 1,000 per minute on Team, and 5,000 per minute on Enterprise. Requests over the limit receive HTTP 429 with a Retry-After header.",
+      "score": 2.162875370483225
+     }
+    ],
+    "q12": [
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 5.51643489303728
+     },
+     {
+      "id": "sla#1",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Service credits\n\nIf monthly uptime falls below the commitment, customers are eligible for service credits. Uptime between 99.0% and the commitment earns a 10% credit on that month's fee. Uptime below 99.0% earns a 25% credit. Credits must be requested within 30 days of the end of the affected month by contacting support.\n\nService credits are applied to future invoices and cannot be exchanged for cash. The maximum credit in any month is 25% of the monthly fee.",
+      "score": 3.0609574059704525
+     },
+     {
+      "id": "security#3",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Backups\n\nBackups are taken every 6 hours and retained for 35 days. Point-in-time restore is available on Enterprise plans.",
+      "score": 2.135510292653623
+     },
+     {
+      "id": "security#2",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Authentication\n\nSingle sign-on (SSO) via SAML 2.0 is available on Team and Enterprise plans. SCIM user provisioning is available on Enterprise only. Two-factor authentication can be enforced for all members by any workspace admin.",
+      "score": 2.0640491701165797
+     }
+    ],
+    "q13": [
+     {
+      "id": "sla#1",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Service credits\n\nIf monthly uptime falls below the commitment, customers are eligible for service credits. Uptime between 99.0% and the commitment earns a 10% credit on that month's fee. Uptime below 99.0% earns a 25% credit. Credits must be requested within 30 days of the end of the affected month by contacting support.\n\nService credits are applied to future invoices and cannot be exchanged for cash. The maximum credit in any month is 25% of the monthly fee.",
+      "score": 15.213395091325474
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 6.780250045929076
+     },
+     {
+      "id": "support#0",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Channels\n\nStarter customers can get help through the community forum and email support. Team customers additionally get live chat. Enterprise customers get a dedicated customer success manager and a private Slack channel.",
+      "score": 4.608567989113961
+     },
+     {
+      "id": "support#2",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Severity levels\n\nPriority-1 means the service is unavailable or data loss is occurring. Priority-2 means a major feature is degraded. Priority-3 covers general questions and minor bugs.",
+      "score": 2.5548421383921003
+     }
+    ],
+    "q14": [
+     {
+      "id": "sla#1",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Service credits\n\nIf monthly uptime falls below the commitment, customers are eligible for service credits. Uptime between 99.0% and the commitment earns a 10% credit on that month's fee. Uptime below 99.0% earns a 25% credit. Credits must be requested within 30 days of the end of the affected month by contacting support.\n\nService credits are applied to future invoices and cannot be exchanged for cash. The maximum credit in any month is 25% of the monthly fee.",
+      "score": 9.15518507263447
+     },
+     {
+      "id": "support#2",
+      "docId": "support",
+      "docTitle": "Customer Support",
+      "text": "## Severity levels\n\nPriority-1 means the service is unavailable or data loss is occurring. Priority-2 means a major feature is degraded. Priority-3 covers general questions and minor bugs.",
+      "score": 2.5548421383921003
+     },
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 2.2491780739782894
+     }
+    ],
+    "q15": [
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 7.7736571667964665
+     }
+    ],
+    "q16": [
+     {
+      "id": "security#1",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Certifications\n\nNorthwind Cloud holds SOC 2 Type II and ISO 27001 certifications. Audit reports are available to Enterprise customers under NDA. Northwind is not currently HIPAA compliant and must not be used to store protected health information.",
+      "score": 7.219986005726517
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.2393653803301512
+     },
+     {
+      "id": "api#2",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Webhooks\n\nWebhooks deliver events such as file.created and member.added to an HTTPS endpoint. Each delivery is signed with an HMAC-SHA256 signature in the X-Northwind-Signature header. Failed deliveries are retried up to 5 times with exponential backoff over 24 hours.",
+      "score": 1.2033721940669329
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 1.0122829612957178
+     }
+    ],
+    "q17": [
+     {
+      "id": "security#0",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Data protection\n\nAll customer data is encrypted at rest with AES-256 and in transit with TLS 1.3. Encryption keys are rotated every 90 days. Enterprise customers can bring their own encryption keys (BYOK) through AWS KMS.\n\nCustomer data is stored in the region chosen when the workspace is created. Available regions are US-East, EU-Frankfurt, and AP-Sydney. A workspace's region cannot be changed after creation.",
+      "score": 5.301707433670263
+     },
+     {
+      "id": "refunds#0",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Cancellation\n\nWorkspaces can be cancelled from the admin console under Settings > Plan > Cancel subscription. Only workspace owners can cancel; admins cannot.\n\nAfter cancellation, data is retained for 30 days, during which the owner can reactivate the workspace with all content intact. After 30 days, all workspace data is permanently deleted.",
+      "score": 2.063209089578658
+     },
+     {
+      "id": "pricing#2",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Free trial\n\nEvery new workspace gets a 14-day free trial of the Team plan. No credit card is required to start a trial. When the trial ends, the workspace is downgraded to read-only mode until a plan is selected.",
+      "score": 1.7422333237156855
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 1.5049436761151835
+     }
+    ],
+    "q18": [
+     {
+      "id": "security#2",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Authentication\n\nSingle sign-on (SSO) via SAML 2.0 is available on Team and Enterprise plans. SCIM user provisioning is available on Enterprise only. Two-factor authentication can be enforced for all members by any workspace admin.",
+      "score": 6.840840490047109
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 4.547366125996314
+     },
+     {
+      "id": "refunds#1",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Refunds\n\nMonthly plans are non-refundable, but cancelling stops all future charges. Annual plans can be refunded on a prorated basis if cancelled within the first 60 days of the term. After 60 days, annual plans are not refundable.\n\nRefund requests are processed within 10 business days and are returned to the original payment method.",
+      "score": 1.4161353776673287
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 1.365703206097979
+     }
+    ],
+    "q19": [
+     {
+      "id": "security#3",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Backups\n\nBackups are taken every 6 hours and retained for 35 days. Point-in-time restore is available on Enterprise plans.",
+      "score": 8.124825125151427
+     }
+    ],
+    "q20": [
+     {
+      "id": "api#1",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Rate limits\n\nAPI requests are limited to 100 requests per minute per token on Starter, 1,000 per minute on Team, and 5,000 per minute on Enterprise. Requests over the limit receive HTTP 429 with a Retry-After header.",
+      "score": 9.18228243969426
+     },
+     {
+      "id": "refunds#2",
+      "docId": "refunds",
+      "docTitle": "Refund and Cancellation Policy",
+      "text": "## Downgrades\n\nDowngrading from Team to Starter takes effect at the end of the current billing period. If the workspace uses more than 50 GB of storage, the downgrade is blocked until usage is reduced below the Starter limit.",
+      "score": 3.355583777537584
+     },
+     {
+      "id": "api#3",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Versioning\n\nThe current API version is v3. Version v2 is deprecated and will stop working on 2027-03-31.",
+      "score": 2.441214701004805
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 2.321364771624168
+     }
+    ],
+    "q21": [
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 3.2902966171525376
+     },
+     {
+      "id": "security#1",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Certifications\n\nNorthwind Cloud holds SOC 2 Type II and ISO 27001 certifications. Audit reports are available to Enterprise customers under NDA. Northwind is not currently HIPAA compliant and must not be used to store protected health information.",
+      "score": 1.7241102308892393
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.2393653803301512
+     },
+     {
+      "id": "api#2",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Webhooks\n\nWebhooks deliver events such as file.created and member.added to an HTTPS endpoint. Each delivery is signed with an HMAC-SHA256 signature in the X-Northwind-Signature header. Failed deliveries are retried up to 5 times with exponential backoff over 24 hours.",
+      "score": 1.2033721940669329
+     }
+    ],
+    "q22": [
+     {
+      "id": "security#1",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Certifications\n\nNorthwind Cloud holds SOC 2 Type II and ISO 27001 certifications. Audit reports are available to Enterprise customers under NDA. Northwind is not currently HIPAA compliant and must not be used to store protected health information.",
+      "score": 3.5897929788084317
+     },
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 2.5589157278932246
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 2.4978923003599993
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.2393653803301512
+     }
+    ],
+    "q23": [
+     {
+      "id": "pricing#0",
+      "docId": "pricing",
+      "docTitle": "Northwind Cloud Pricing and Plans",
+      "text": "## Plans\n\nNorthwind Cloud offers three plans: Starter, Team, and Enterprise. Starter costs $12 per user per month and includes 50 GB of storage per workspace. Team costs $29 per user per month and includes 1 TB of storage per workspace. Enterprise pricing is negotiated annually and has a minimum commitment of 100 seats.",
+      "score": 2.1729653471078016
+     },
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 1.7502441392304633
+     },
+     {
+      "id": "security#1",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Certifications\n\nNorthwind Cloud holds SOC 2 Type II and ISO 27001 certifications. Audit reports are available to Enterprise customers under NDA. Northwind is not currently HIPAA compliant and must not be used to store protected health information.",
+      "score": 1.7241102308892393
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.2393653803301512
+     }
+    ],
+    "q24": [
+     {
+      "id": "sla#0",
+      "docId": "sla",
+      "docTitle": "Service Level Agreement",
+      "text": "## Uptime commitment\n\nNorthwind Cloud commits to 99.9% monthly uptime for Team plans and 99.99% monthly uptime for Enterprise plans. Starter plans have no uptime commitment.\n\nScheduled maintenance windows are announced at least 72 hours in advance on the status page and do not count as downtime. Maintenance normally occurs on Sundays between 02:00 and 04:00 UTC.",
+      "score": 3.211831673977198
+     },
+     {
+      "id": "security#1",
+      "docId": "security",
+      "docTitle": "Security and Compliance",
+      "text": "## Certifications\n\nNorthwind Cloud holds SOC 2 Type II and ISO 27001 certifications. Audit reports are available to Enterprise customers under NDA. Northwind is not currently HIPAA compliant and must not be used to store protected health information.",
+      "score": 1.7241102308892393
+     },
+     {
+      "id": "api#0",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Authentication\n\nThe Northwind REST API authenticates with personal access tokens, which are created under Profile > Developer settings. Tokens expire after 90 days by default; admins can shorten this to as little as 7 days. Tokens are shown only once at creation.",
+      "score": 1.2393653803301512
+     },
+     {
+      "id": "api#2",
+      "docId": "api",
+      "docTitle": "Developer API",
+      "text": "## Webhooks\n\nWebhooks deliver events such as file.created and member.added to an HTTPS endpoint. Each delivery is signed with an HMAC-SHA256 signature in the X-Northwind-Signature header. Failed deliveries are retried up to 5 times with exponential backoff over 24 hours.",
+      "score": 1.2033721940669329
+     }
+    ]
+   }
+  }
+ ]
+}
