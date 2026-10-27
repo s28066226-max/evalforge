@@ -104,6 +104,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  /* The hero glow bleeds past the viewport on purpose; clip (unlike hidden) keeps the sticky header working. */
+  overflow-x: clip;
 }
 main {
   flex: 1;
@@ -491,7 +493,12 @@ button.chip[aria-pressed="true"] {
 .hero::before {
   content: "";
   position: absolute;
-  inset: -28px -50vw 0;
+  top: -28px;
+  bottom: 0;
+  /* Full viewport width, centered on the hero, without widening the page. */
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
   background: var(--glow);
   z-index: -1;
 }
